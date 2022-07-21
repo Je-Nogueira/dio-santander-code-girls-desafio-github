@@ -1,0 +1,795 @@
+# Introdução à Programação e Pensamentos Computacional
+
+# Pensamento Computacional
+
+## Introdução
+
+//Primeiros passos para programar/Pensamento Computacional
+
+Não se restringe uma e exclusivamente ao meio da computação
+
+“Processo de pensamento envolvido na expressão de soluções em passos computacionais ou algoritmos que podem ser implementados no computador. (Aho,2011; Lee 2016)”
+
+É um pensamento sistemático e eficiente tanto na formulação e resolução de problemas, deve ser utilizado de uma forma em que um humano e uma máquina consigam resolver.
+
+Habilidade Generalista - podendo ser usado na matemática, leitura, escrita…utiliza este tipo de pensamento de maneira intuitiva.
+
+Consiste em dividir um problema complexo em subproblemas ( decomposição, reconhecimento de padrões, abstração, design de algoritmos). Exemplo: fazer bolo - é composto por massa, recheio e cobertura…vc pode fazer eles sem seguir uma sequencia, porém para monta-lo é necessário seguir uma sequência.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/18e9653a-0eae-41ce-b5a5-ebd321eebdf2/Untitled.png)
+
+## Habilidade complementares
+
+São inerentes ao sucesso
+
+-Raciocínio Lógico: é uma forma de pensamento estruturado, ou raciocínio, que permite encontrar a conclusão ou determinar a resolução de um problema. - Habilidade de treinamento.
+
+Indução: Fenômeno observado, onde se identifica leis e teorias que podem ser aplicadas. Relacionado a ciências experimentais (ex. polvorá).
+
+Dedução: São Leis e teorias que preveem e explicam algum acontecimento. ( inverso da indução). - Muito utilizado nas ciências exatas onde se precisa provar que tal teoria é valida.
+
+Abdução: A partir de uma conclusão você tira a premissa. Ex.: A grama está molhada, logo deve ter chovido.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3dba3760-2187-491f-9f00-b1d0c5030396/Untitled.png)
+
+-Aperfeiçoamento: A partir de uma solução determinar pontos de melhora e refinamento.
+
+Melhor uso de recursos: 
+
+- encontrar solução eficiente;
+
+-Otimizar processos.
+
+Melhorar códigos e algoritmos
+
+-Simplificar linhas de códigos;
+
+-Funções bem definidas.
+
+## Pilares: Decomposição
+
+“If you can´t solve a problem, then there is an easier problem that you can solve: find it” - George Polya - professor e matemático
+
+Dado um problema complexo, devemos quebra-lo em problemas menores, Portanto, problemas mais fáceis e gerenciáveis.
+
+-Estratégia:
+
+Análise: Processo de quebrar e determinar partes menores e gerenciáveis, ou seja,  - estudar, e explorar tentando decompor em elementos constituintes e realizar exame detalhado do que precisa resolver ali.
+
+Síntese: Combinar os elementos recompondo o problema original. - Consiste em reunir os elementos distintos em um único elemento, fundir os elementos de maneira coerente, processo de reconstrução.
+
+A ordem de execução de tarefas menores pode ser **sequencial ou paralelo** - vai depender se um problema depende do outro para ser resolvido. 
+
+**Sequencial:** dependências entre tarefas, executá-las em “fila” uma seguida da outra.
+
+**Paralelo:** tarefas podem ser executadas concomitantemente. - Sendo esta mais eficiente e demandando menos tempo.
+
+Dentro da decomposição temos **variáveis** que estão presentes dentro destes **problemas pequenos** que são determinados pela **segmentação** do problema maior, não basta apenas aplicar deve treinar a decomposição “by yourself” - Existem maneiras distintas de decompor o mesmo problema.
+
+Como decompor:
+
+Identifica ou coleta os dados;
+
+Agregar os dados
+
+Funcionalidade
+
+Exemplo: 
+
+Cozinhar - Identificar os ingredientes, determinar as etapas (sequencial ou paralelo), executar cada etapa, agregar os ingredientes para finalizar (recompor com coerência) - ex fazer arroz.
+
+Funcionamento de uma bike - identificar os componentes(peças), qual o papel de cada componente, interdependência das peças - **Funcionamento do sistema.**
+
+Criar um app - finalidade, interface, funcionalidades, pré-requisitos. - **Definição de componentes e etapas** - desenvolvimento mais eficiente.
+
+Artigo - o que será abordado, estrutura, conteúdo de cada tópico, textos de conexão. **Definição de componentes e etapas** - sequencial ou paralelo em ordem ou não.
+
+Movimento de um avatar: 
+
+Desta forma você otimiza linhas de código, evita redundância
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f09a79a9-bc2f-437e-a83a-e82a988e03be/Untitled.png)
+
+## Pilares: Padrões
+
+Reconhecimento de padrões - começa pela comparação com um modelo base/referência, estrutura invariante, repetição - existe um modelo de referencia mínima para que se considere (como uma cadeira). 
+
+Reconhecemos os padrões dentro do contexto computacional através das **similaridades e diferenças.**
+
+Ex.: fotos de redes sociais, elas passam por uma compressão para posteriormente serem salvas no servidor de dados - Processo utilizado por plataformas diferentes - as tecnicas de compressão podem váriar, mas há um padrão de que as fotos devem ser zipadas.
+
+compressão de dados: 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b4980bab-d592-4f7e-914a-c6225a0a42fe/Untitled.png)
+
+Por que determinar padrões?
+
+Generalizar, com objetivo de obter resolução para problemas diferentes. Fazemos isso através de classes e categorias onde as categorias dependem do domínio e do tipo de mídia. O ser humano faz isso utilizando o grau de similaridade - grupos conhecidos e desconhecidos sendo as vezes subjetivo, já o computador reconhece por comparação, sendo objetivo e direto, se ele não tem aquela informação ele não consegue fazer a comparação. Então devemos representar os atributos para que a maquina consiga aprender - conceito associado ao objeto, ele armazenará os dados  e então ele terá as regras de decisão para definir padrões.
+
+Resumo: a detecção de padrões vem da ideia de extrair características afim de classificar os seus dados. Sendo possível utilizar de diferentes métodos e diferentes aplicações.
+
+Ex de aplicações:
+
+-Classificação de dados,
+
+-Reconhecimento de imagem (placa de carro),
+
+-Reconhecimento de fala(tradutor),
+
+-Análise de cenas,
+
+-Classificação de documentos.
+
+Redes Neurais, Machine Learning, Inteligência Artificial e ciências de dados - utilizando o reconhecimento de padrões.
+
+## Pilares: Abstração
+
+**Abstrair**: Observar, um ou mais elementos, avaliando características e propriedades em separado.
+
+**Abstração**: Processo intelectual de isolamento de um objeto da realidade
+
+**Generalizar**: Tornar-se geral, mais amplo, extensão.
+
+**Generalização**, na lógica, é a operação intelectual que consiste em reunir numa classe geral, um conjunto de seres ou fenômenos similares.
+
+Para classificar estes dados utilizamos das:
+
+Características
+
+Pontos essenciais
+
+Generalizar x detalhar
+
+por exemplo: Representação de dados de Estudantes:
+
+Características: 
+
+Essencial:
+
+Nome completo
+
+Matrícula
+
+Endereço
+
+Campus
+
+Curso
+
+Telefone
+
+E-mail
+
+***Detalhes:***
+
+***Trabalho***
+
+***Tem filhos***
+
+***Programa preferido***
+
+***Livro preferido***
+
+***Tamanho do calçado***
+
+Generalizar: de forma que vc possa utilizar a solução encontrada para resolver outros problemas diversos.
+
+## Pilares: Algoritmos
+
+O computador tem energia, eficiência, rapidez, mas não trabalha sozinho, é preciso determinar instruções detalhadas para vc determinar o que quer realizar.
+
+O objetivo do computador é receber, manipular e armazenar os dados.
+
+Os programas são constituídos por instruções e elas dão o passo a passo do que é necessário para o pc funcionar.
+
+Processo de resolução de problemas “step by step” utilizando instruções:
+
+O que precisa ser feito;
+
+Qual a ordem de execução.
+
+Esse algoritmo precisa ser entendido por humano e máquina.
+
+Desenvolvimento do Programa:
+
+Análise : Entender, estudar e definir quais são os dados de entrada e saída (Instruções especificas);
+
+Algoritmo: descreve o problema por meio de ferramentas narrativas, fluxograma ou pseudocódigo.
+
+Codificação: O algoritmo é codificado de acordo com a linguagem de programação escolhida.
+
+desta forma temos:
+
+Sequencia de passos com objetivo definido
+
+Execução de tarefas específicas
+
+Conjunto de operações que resultam em uma sucessão finita de ações.
+
+Ex.: Preparar um sanduiche, trocar uma lâmpada, fazer uma receita de bolo, trajeto ao trabalho….- Tds são instruções executadas passo a passo para concluir a tarefa. 
+
+Como construir um algoritmo:
+
+1 - Compreensão do problema,
+
+2 - Definir os dados de entrada,
+
+3 - Definir processamento ( quais são as operações que vão ser realizadas),
+
+4 - Definir dados de saída,
+
+5 - Utilizar um método de construção,
+
+6 - Teste e diagnóstico.
+
+Construção de algoritmo apartir de:
+
+Narrativa: utilização da linguagem natural - diversas interpretações (sem conceitos novos)
+
+Fluxograma: é uma estrutura gráfica que se utiliza de símbolos pré-definidos que definem qual o tipo de ação que esta sendo executado, é de simples entendimento, porém requer conhecimento prévio da estrutura e símbolos
+
+Pseudocódigo: Portugol - passos a serem seguidos (regras) bem definidos - mais próximo de uma códificação.
+
+Narrativa:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/788e7366-9c7a-4ba0-af33-0f3c3546c3a0/Untitled.png)
+
+Fluxograma:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b7a54625-bd8b-411a-9bfa-e55c1127ed63/Untitled.png)
+
+## Estudos de caso conceitual: perdido
+
+## Estudo de caso aplicado: Soma de um intervalo
+
+## Estudo de caso aplicado: Adivinhe um número
+
+# Introdução à lógica de programação
+
+## O que é lógica?
+
+Definição de problema: Problema é uma questão que foge a uma determinada regra, ou melhor é um desvio de percurso, o qual impede de atingir um objetivo com eficiência e eficácia.
+
+“Parte da filosofia que trata das formas do pensamento em geral (dedução, indução, hipótese, inferência etc.) e das operações intelectuais que visam à determinação do que é verdadeiro ou não.”
+
+Na programação é a organização e planejamento das instruções, assertivas em um algoritmo, a fim de viabilizar a implantação de um programa.
+
+Os seres humanos são capazes de prever comportamento e os computadores. Por vezes não prevemos os costumes por falta de costumes, mas os computadores só são capazes de seguir instruções detalhadas.
+
+“Everybody in this country should learn how to program a computer because it teaches you how to think.”
+
+## Técnicas de lógica de programação
+
+Planta baixa → Projeto →Planejamento
+
+Seguem a lógica e determinam as instruções
+
+**Técnica Linear**: é uma execução sequenciada ordenação de elementos por uma única propriedade, com recursos limitados, de uma única dimensão. (Matemática)
+
+. Modelo tradicional,
+
+. Não tem vínculo:
+
+. Estrutura hierárquica,
+
+. Programação de computadores
+
+Ex.: acordo → faço café → tomo café
+
+**Técnica Estruturada**:
+
+Organização, disposição e ordem dos elementos essenciais que compõem um corpo (concreto ou abstrato)
+
+No Processamento de dados temos como objetivo:
+
+. Escrita ( Programa)
+
+. Entendimento
+
+. Validação
+
+. Manutenção (Facilitador)
+
+Ex.: Acordo → faço café → tomo café da manhã
+
+              →faço suco → tomo café da manhã
+
+te da possibilidades, opções.
+
+**Técnica Modular**:
+
+Controlada por um conjunto de regras - Ex. Diversos módulos de um curso, são partes independentes mas que geram um resultado.
+
+dados de entrada → processo de transformação → dados de saída. ( Modelo Padrão)
+
+Desta forma é possível obter: 
+
+. Simplificação do algoritmo,
+
+. Decompor o problema,
+
+. Verificação do módulo
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d575d789-80ed-4570-b40d-79e93e301e3c/Untitled.png)
+
+# Fundamentos de algoritmos
+
+## Tipologia e variáveis
+
+Qual a função do computador? 
+
+É processar as **informações** que nós damos para ele, sendo estas compostas por dois tipos de conteúdo **dados** e **instruções**.
+
+Dados: (primitivos): 
+
+. Númericos (inteiros - são números que não possuem casas decimais (int/log/float), reais - são todos os números sejam eles com casas decimais ou não)
+
+. Caracteres: tudo o que não é representado como número - letras maiúscula e minúscula, !@#$%¨&*()<>,.:;^^
+
+. Lógicos: booleano - 
+
+. onde verdadeiro = 1, V, S
+
+. falso= 0, F, N
+
+Para utilizar dados dentro do sistema utilizamos variáveis. A variável é um tipo de estrutura mutável que pode variar dentro do seu valor, podendo ser incerta, instável e inconstante.
+
+A variável - pode assumir qualquer um dos valores de um determinado conjunto de valores , ficando restrita apenas ao seu tipo (númerico, string….)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/968d7b62-fd80-4894-8ff1-67121c3a7135/Untitled.png)
+
+Boas práticas para dar nomes a variável:
+
+.Atribuição de um ou mais caracteres
+
+. Primeira letra - não número
+
+. Sem espaços em branco 
+
+. Vedado
+
+. Utilização de palavras reservadas
+
+. Caracteres e números
+
+ex. Nome-usuário,, telefone….
+
+Desta forma a variável tem o papel de:
+
+. Ação - modificação de estado
+
+. Controle - Vigiada, controle
+
+Uma variável pode ser uma constante, quando é quer representar por exemplo o pi=3,14, phi=1,618, resulta=recebido*0.10 - uma valor que não será alterado.
+
+## Instruções primitivas
+
+As instruções vão determinar as ações que serão inseridas dentro dos dados…geralmente cálculos matemáticos
+
+Input: variáveis ou constantes
+
+Operadores: Binário ou Unário
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14804d83-177d-494f-b9b0-d7f1a8669386/Untitled.png)
+
+Instruções são linguagem de palavra-chave (vocabulário) de uma determinada área de programação que tem por finalidade comandar um computador que irá tratar os dados.
+
+Instruções Primitivas dentro de cada linguagem de programação possui uma sintaxe particular, por exemplo janela/window/ventana.
+
+Outros conceitos são a entrada, processamento e saída de dados, que são exportados de algum lugar (aqruivo/diretorio), levados ao ambiente computacional para serem processados e depois imprimidos de alguma forma.
+
+Ex.: Média Escolar - com estrutura sequencial
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3db83750-56a5-480e-bd6c-e47d2152c41e/Untitled.png)
+
+## Estruturas condicionais e operadores
+
+Condição: estado de uma pessoa ou coisa 
+
+Condicional: expressa uma condição ou suposição, contém ou implica numa suposição ou hipótese 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/38b2799b-c464-4c58-b04c-2adcd8493408/Untitled.png)
+
+Podem haver diferentes estruturas condicionais:
+
+simples, composta e encadeada.
+
+.Simples: apenas verifica se a condição foi satisfeita.
+
+.Composta: se a condição não foi satisfeita, coloca-se uma exceção
+
+.Encadeada: se, se não - uma sucessão de estruturas condicionais
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/82bd4774-80b9-4a7e-ade4-86595a235208/Untitled.png)
+
+Operadores Relacionais:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8c4f0878-e13b-4aa4-a392-b9e21d673431/Untitled.png)
+
+Condicional Simples: ex.
+
+SE (<condição>) então
+
+<instrução para condição verdadeira>
+
+fim_se
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d1d46a60-b11b-4481-8ae1-acfc75286124/Untitled.png)
+
+algoritmo relacionado a condicional simples -
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/53889f7a-bf0d-46ee-a683-ffaa55e2493c/Untitled.png)
+
+Condicional Composto: 
+
+Se (<condição>) então
+
+<instruções para condição verdadeira>
+
+Se não
+
+<instruções para condição falsa>
+
+fim_se
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a5d18a3e-0dd6-471f-84a7-8d4c20ffd71c/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/116b13c2-5624-4b6b-a78e-bb3d29f26b16/Untitled.png)
+
+Condicional Encadeada:
+
+Se (<condição 1>) então
+
+<instruções para condição verdadeira>
+
+Se não 
+
+Se (<condição 2>) então
+
+<instruções para: condição 2 verdadeira e condição 1 falsa>
+
+Se não
+
+<instruções para condição 1 e 2 falsas>
+
+fim_se
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/81f73b9a-3fcd-413f-90cb-a7edc9ac57c0/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c03f7b8-3857-4b2c-9f3f-86d5a3c0ad84/Untitled.png)
+
+Operadores lógicos devem ser utilizados quando precisar de uma **verificação** de verdadeiro e falso ou **substituição** (encadeamento de condições)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a264d05c-6238-4a5f-b1bc-21a62b286896/Untitled.png)
+
+AND - todas devem ser satisfeitas: interseção
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bba44f70-f143-4b49-8e69-7241c186b019/Untitled.png)
+
+OR - apenas uma das condições deve ser verdadeira: união
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d66e772d-9c7a-4c3b-bf7c-ca401907f901/Untitled.png)
+
+NOT - operador de negação, inversão do resultado lógico:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/92ebfbee-c20e-4b5b-89d5-ca89745f3fee/Untitled.png)
+
+## Estruturas de repetição
+
+Dado que eu precise que um trecho do meu código se repita varias vezes com diferentes parâmetros/valores. (laços/controle de fluxo/malha de repetição/repetição/loop)
+
+Condições de parada: 
+
+.número de repetições pré-fixada
+
+.condição a ser satisfeita
+
+Vantagens de usar estrutura de repetição:
+
+.redução de linhas
+
+.compreensão facilitada
+
+.redução de erro
+
+ex.: 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/06bed942-57da-4a6e-b504-10773c54f70a/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a778469e-70e3-49e3-bfc0-c815597adc1f/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f43d414f-c127-4029-8b33-e88075c5a818/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3718bede-7253-4362-92c1-8d25339c05c9/Untitled.png)
+
+É possível mesclar as estruturas uma dentro da outra.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f8f2cd88-0e6e-4715-aabd-e75b72b383ef/Untitled.png)
+
+## Vetores e matrizes
+
+Vetores são caracterizados por uma variável dimensionada com tamanho pré-fixado. →Container/ Matriz unidimensional
+
+Matriz é uma tabela organizada em linhas e colunas no formato m x  n, onde m representa o número de linhas (horizontal) e n o número de colunas (vertical).
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e60d40b-d6d2-4e9e-80da-ac9c1a05c434/Untitled.png)
+
+## O que são funções?
+
+Similar ao conceito de função da matemática, tem o intuito de  conectar um elemento A ao conjunto de um elemento B.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8e31ce43-f2ed-4148-9719-c03e18e606cf/Untitled.png)
+
+As funções, ou sub-rotinas são blocos de instruções que realizam tarefas específicas.
+
+Modularização do programa
+
+Código mais claro e conciso
+
+Reutilização de instruções
+
+São blocos de instruções (código), identificados por nomes e parâmetros.
+
+A função altera o estado do programa
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aee9f646-bc59-425e-a1c8-8cfe5572ca64/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f010bf09-90a1-44ee-af64-11519b9847c3/Untitled.png)
+
+## Instruções de entrada/saída
+
+Input/entrada: Consiste na inserção e recebimento de dados do mundo real por meio de ação de alguma interface, ou seja, mouse, teclado, arquivos, entre outros.
+
+Utput/saída: Consiste na impressão dos dados do mundo abstrato, digital por meio de ação de alguma interface. Os formatos podem variar desde simples arquivos binários até complexas querys de banco de dados.
+
+Existem dois tipos de saída dentro de um programa (algoritmo): 
+
+.Saída programada
+
+.Saída por interrupção
+
+Casos:
+
+.Bem sucedida
+
+.Erro de sintaxe ou outro
+
+.Erros de programação
+
+.Problemas com a interface
+
+# Linguagem de programação
+
+## Introdução à linguagens de programação
+
+É importante falar da história da computação, para compreender as dificuldades enfrentadas, os fundamentos da computação e o processo de pensamento.
+
+Todo mudança começa pelo hardware e em seguida no software.
+
+Evolução do Hardware
+
+3 mi A C - surge o primeiro dispositivo de calculo - ábaco romano. 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/00cbca63-7bef-4509-bc4d-5c79ef154e3f/Untitled.png)
+
+Instrumento computacional é diferente de computador - 2º guerra mundial 1939 - 1945 - houve um investimento massivo na revolução tecnológica.
+
+Carriage - primeiro instrumento computacional - com operação matemáticas (soma, subtração, dividir, multiplitar)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2acf9738-4780-4bfd-b1c5-e2035f085eaa/Untitled.png)
+
+1837 - Conceito de software Charles Babbage - determinou que algumas instruções poderiam ser utilizadas, mas não sabia muito bem como fazer.
+
+1942-1943 Ada Lovelace conheceu Charles anteriormente e era a pupila de Demorgan ( matemático-álgebra boleana) - Ada fez a transcrição de todas as anotações do Charles, porém ela determinou instruções que executariam as ideias do Charles, o que a tornou a primeira programadora e a patrona da programação
+
+1940 - Alan Turing - pai da computação após decodificar uma mensagem de guerra - definiu o primeiro sistema formal, definiu o conceito de algoritmo e introduziu o conceito de inteligência artificial
+
+entre 1940 e 1950 Alan Turing trabalhou com Von Neuman e Claude Shannon no projeto Diab EUA Codificador de voz.
+
+1948 - Claude Shannon vê uma nova possibilidade de utilizar a algebra booleana 
+
+1950 - Alan Turing escreve um artigo onde ele questionava se uma maquina podia ou não pensar.
+
+1980 - um inventor criou uma maquina de cartões de tabular, a qual foi utilizada no censo americano - mais pra frente a sua empresa se tornou a IBM.
+
+Os primeiros computadores: Válvula, Relés - avançado
+
+Numa parceria de Harvard com a IBM - separação de memórias para as instruções e para os dados - Decisão - algoritmo - Criaram o Harvard Mark 1
+
+ENIAC - programável 18 mil válvulas - abriu a porta para os computadores digitais.
+
+Em 1943 - Colossus-programação por fio
+
+Em 1952 - EDVAC 
+
+Em 1975 - Intel 8080 — O Paul e Bell criaram a Linguagem basic e a Microsoft
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/709641e2-25d0-422d-b3bf-bd7ed8647e07/Untitled.png)
+
+Em 1976 - Apple
+
+Em 1977 - Apple II - grande sucesso 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ddf3e07a-731b-4f6b-b208-87f9e2259f31/Untitled.png)
+
+Em 1980 - Apple III
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ef6cfc27-c209-407a-b127-39b68320aa7d/Untitled.png)
+
+Em 1981 - IBM.PC
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/864aafcf-472e-420a-b3de-253167e921a5/Untitled.png)
+
+Em 1983 - Apple Lisa - com o intuito de revolucionar a interface do usuário - foi um fracasso
+
+Em 1985 - Windows 1.0 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16f918c1-26e2-4cb2-ba7b-fd806d043398/Untitled.png)
+
+Em 1988 - Windows 2000
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/acaf1fe8-77ef-4074-871e-a8890073c62f/Untitled.png)
+
+Em 2001 - Windows XP
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/962d464e-0ad6-4622-8887-40ac0ef56064/Untitled.png)
+
+Evolução do Software
+
+Em 1949 surgiu a primeira linguagem de “programação”, era uma linguagem de montagem de máquina - Assembly
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b861f6dc-86cc-4d96-8247-75a8351228e1/Untitled.png)
+
+Em meados de 1950 surgem de fato as linguagem de programação - COBOL - utilizados com os grandes computadores digitais como o ENIAC ; o ForTran que até hoje é utilizado, lisp
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/df6e63eb-9efb-4e5a-9f7e-be7e684b4561/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f8cd2e6-312f-4a49-a849-72b6536287b3/Untitled.png)
+
+Entre 1960 e 1970 com o surgimento dos pcs surge os Paradigmas a linguagem C, o Prolog e o MachineLearning - ML
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/33a93f39-92be-49e2-bcdc-1d91cb17eb63/Untitled.png)
+
+Na década de 90 começam a surgir linguagem de programação de alto nível
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6df26070-dc77-487a-b904-edc6376dc093/Untitled.png)
+
+Em 2000 surgiram 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/663decc7-9614-4e6e-be58-26400a7c7be7/Untitled.png)
+
+Contudo conseguimos ver que os problemas computacionais são recorrentes.
+
+Problemas computacionais: objeto de discussão que possui instruções passo a passo que são facilmente resolvíveis em ambiente computacional.
+
+Problemas de decisão - de caráter lógico - sim ou não , ideia , pertencimento 
+
+Problemas de Busca -  relacionamento binário, objetivo- semelhante ao nome, x está em A? - Recorrente em teoria de grafos ex.: clique
+
+Problemas de Otimização - guardar dados MB, KB, disquete, drive, nuvem, bigdata.
+
+O que é uma linguagem de programação? Método padronizado composto por um conjunto de regras sintáticas e semânticas de implementação de um código fonte.
+
+## Como um computador entende o programa?
+
+Um código fonte é o código que eu gero a partir da minha programação em alto nível (C#, JavaScript dentre outros) o qual vai ser traduzido para a linguagem binária onde o pc interpreta os comandos e conseguir rodas-los. 
+
+Tradução: 1- Geração do programa objeto
+
+           2 - Execução do programa objeto
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/97fc647e-2a65-4338-96cf-ab03f368bea1/Untitled.png)
+
+Interpretação - Programa fonte executado diretamente.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1e5c8fd1-53ca-4ecc-8f53-719c504193c7/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/291456f6-f57e-4130-8242-0a69281ceea9/Untitled.png)
+
+## Características de um programa
+
+Devemos seguir algumas diretrizes na hora de codificar o algoritmo (desenvolver programas):
+
+**Legibilidade**: facilidade de leitura, compreensão, ortogonalidade(coerência nas instruções), definição adequada das estruturas.
+
+**Redigibilidade**: pode conflitar com a legibilidade, ortogonalidade, simplicidade da escrita, suporte à abstração, reuso do código, expressividade (utilizar o operador ++; uso do for). - Facilidade de escrita do código.
+
+**Confiabilidade**: verificação de tipos, trata exceções, uso de ponteiros, compatibilidade entre compiladores - Faz o que foi programado para fazer.
+
+Custo: Análise de impacto, estou usando sabiamente, estou deixando o meu código eficiente para aquele cenário - verificar a parte de treinamento, codificação, execução, infraestrutura.
+
+Outras características que devemos levar em consideração são: as atualizações, uso para IA, disponibilidade de ferramentas, comunidade ativa, adoção pelo mercado.
+
+## Análises de código
+
+1 fase de um processo de compilação é a **Análise léxica**/scanner ou leitura: a função desta é fazer a leitura do programa fonte, carácter por carácter,  e então agrupar os caracteres elementos (identificadores, palavras reservadas, números, strings) denominados TOKENs ( sequência de símbolos léxicos)- neste processo ela vai particionar, classificar e eliminar aquilo que não é necessário ( caracteres de espaços em branco, comentários…).
+
+**Análise sintática:** sintaxe nos remete a forma, componente do sistema linguístico que interligam os constituintes da sentença, atribuindo-lhe uma estrutura. - define a Corretude do programa.
+
+padrão - gramática - Depende da linguagem de programação utilizada.
+
+**Análise semântica**: significado - é o estudo do significado. Incide sobre a relação entre significantes, como palavras, frases, sinais e símbolos. - Lógica do programa.
+
+Erro de semântica: erro de significado - não faz o que é esperado.
+
+if (x=0)
+
+printf(”Ovalore’nulo\n”);
+
+correto:
+
+if (x==0)
+
+printf(”Ovalore’nulo\n”);
+
+## Paradigmas de programação
+
+Paradigma é - forma de resolução de problemas com diretrizes e limitações específicas de cada paradigma utilizando linguagem de programação.
+
+Classificação:
+
+**Orientação à objeto** ( Python, Lua, C++, Java)
+
+**Procedural**: chamadas sucessivas e procedimentos separados (Fortan, Lua).
+
+**Funcional**: instruções são baseadas em funções ( Python, Lua, JavaScript, Java).
+
+**Estruturado**: estrutura de blocos aninhados ( C, C++, Java e JavaScript) .
+
+**Computação distribuída**: funções executadas de forma independente (Ada).
+
+**Lógico** (Ada).
+
+Sendo os mais utilizados a Orientação à objeto e estruturado.
+
+Paradigma Estruturado: ênfase dele é em instruções sendo executadas em sequência. Conceitos: sequência, decisão (relacionado ao teste lógico) e iteração(Funções, laços, condições) - Dominou o mercado até POO(C).
+
+Utilização: 
+
+Problemas simples e diretos
+
+Aprender programação
+
+POO ainda não compreendida por muitos.
+
+function fatorial(x){
+
+if(x>1){
+
+return x*fatorial(x-1);
+
+}
+
+}
+
+Orientação à Objeto: Paradigma de programação baseado na utilização de objetos e suas interações. Análogo ao mundo real. Um objeto é descrito por características específicas, comportamentos e estado. Atributo, comportamento e estado. Ex caneta
+
+- **O que tenho**: Modelo, cor, carga, corpo, tampa, ponta.
+
+-**Sou capaz de fazer**: escrever, desenhar rabiscar, pintar, destampar.
+
+- **Como faço**: tampada, destampada, em uso.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eb6ed3b0-266b-415a-b53c-d6cbe10c6b09/Untitled.png)
+
+Pilares de Orientação a Objeto
+
+**Herança**: a filha herda as caracteristicas de uma classe mãe, os atributos, os métodos o comportamento, mas pode ter também comportamentos específicos.
+
+**Encapsulamento**:
+
+**Polimorfismo**:
+
+**Abstração**:
+
+Poo - reuso de código
+
+PE - problemas específicos e diretos
+
+# Primeiro contato com a programação
+
+## Algoritmos em portugol
+
+[https://portugol-webstudio.cubos.io/ide](https://portugol-webstudio.cubos.io/ide)
+
+## Considerações finais

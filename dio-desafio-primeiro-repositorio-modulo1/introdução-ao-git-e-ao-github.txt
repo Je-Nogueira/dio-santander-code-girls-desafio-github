@@ -1,0 +1,269 @@
+# Introdução ao Git e ao GitHub
+
+links úteis: [Sintaxe Básica Markdown]([https://www.markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/))
+
+## Introdução ao Git
+
+Criado em 2005 - versionamento de código distribuído criado por Linus Torvalds. Git é diferente de GitHub.
+
+1 - Controle de Versão
+
+2 - Armazenamento em nuvem
+
+3 - Trabalho em equipe
+
+4 - Melhorar seu código
+
+5 - Reconhecimento
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3fcba466-d0d9-4404-88ff-cb33b7440dbc/Untitled.png)
+
+## Navegação via command line interface e instalação
+
+### Comandos básicos para um bom desempenho no terminal
+
+Alguns comandos se diferem dependendo do sistema que usamos
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b75b0862-6953-4745-a803-5cdd60c72384/Untitled.png)
+
+1º comando é listar - dir (windows) ls no (unix) - mostra todas as pastas presentes no diretório que você esta.
+
+2º changing direction - cd + / - possibilita a navegação entre as pastas - é igual para todos os sistemas operacionais. - leva para a base do diretório c. Case queira ir para uma pasta específica, digite CD (espaço) nome da pasta (ex.: Windows) - CD WINDOWS
+
+Para retroceder um nível a pasta - utilizar CD..
+
+ * para limpar a tela  - no Windows - cls, no unix -clear ( atalho ctrl+L)
+
+*TAB - auto completa 
+
+3º Criar pasta - mkdir + nome desejado- make direct - ex.: mkdir workspace , para criar um arquivo dentro desta pasta digite o comando: workspace>echo hello > hello.txt ( ele irá procurar se já existe algum arquivo com este nome, caso não haja ele criará o arquivo - nenhuma mensagem de erro irá surgir
+
+*para deletar os arquivos existentes dentro da pasta  - del + nome da pasta - ex.: del workspace.
+
+*para deletar a pasta com todos os arquivos - rmdir + nome da pasta: rmdir workspace /s /q
+
+no unix - rm -rf workspace 
+
+### Realizando a instalação do GIT
+
+[https://git-scm.com/](https://git-scm.com/)
+
+1º Clique em Download for Windows 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6211e317-8dcf-47dc-a27f-cb2ed96852a3/Untitled.png)
+
+Na janela de instalação clique em NEXT
+
+Escolha em que pasta vai instalar
+
+Clique em NEXT
+
+Flegar as opções Git Bash Here e Git GUI Here
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/34b5cf06-4b50-4896-ad90-5c82143be5ba/Untitled.png)
+
+Clique em NEXT
+
+Clique em NEXT
+
+Escolha o Git default editor (editor padrão)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8d8eaac2-9487-4617-b4a6-89cb7a59880a/Untitled.png)
+
+Flegar Let Git decide 
+
+Clique em NEXT
+
+Git from the command line and also from 3rd-party software
+
+Clique em NEXT
+
+Use bundled Open SSH
+
+Clique em NEXT
+
+Use the OpenSSL library
+
+Clique em NEXT
+
+Checkout Windows-style, commit Unix-style line endings (para Windows) e Checkout as-is, commit Unix-style line endings (Unix - MAC, Linux)
+
+Use MinTTY
+
+Clique em NEXT
+
+Default (fast-forward or merge)
+
+Clique em NEXT
+
+*Git Credential Manager Core - atualização do git 2.30 em diante.
+
+Flegar: Enable file system caching e Enable symbolic links
+
+Clique em NEXT
+
+Clique em Install
+
+Finish
+
+## Entendendo como o Git funciona por baixo dos panos
+
+### Tópicos fundamentais para entender o funcionamento do Git
+
+-SHA1
+
+-Objetos fundamentais
+
+-Sistema disbribuído
+
+-Segurança
+
+A sigla SHA significa Secure Hash Algorithm (Algoritmo de Hash Seguro), é um conjunto de funções hash criptográficas projetadas pela NSA (Agência de SEgurança Naciomal dos EUA).
+
+A encriptação gera conjunto de caracteres identificador de 40 dígitos.
+
+É uma forma curta de representar um arquivo.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/80c65382-e5fa-4ecd-8de7-a603f3629a59/Untitled.png)
+
+### Objetos internos do Git
+
+Os objetos são, e suas funcionalidades básicas:
+
+- Blobs
+- Trees
+- Commits
+
+Os arquivos ficam dentro dos obejtos chamados Blods um bloco básico de composição, o qual contém metadados dentro destes. O obejto Blods vai ter o tipo do objeto, o tamanho do arquivo, \ (barra contrária)+0 e o conteúdo de fato do arquivo (seja ele texto, binário etc.).
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7cec73cb-dd27-4d06-b0ce-40811b48436b/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c6764797-c208-4dbe-81ab-307a994274e0/Untitled.png)
+
+A Tree armazena e aponta para tipos de Blob diferentes, responsável por montar toda a estrutura de onde onde estam localizados os arquivos, além de todos os dados de o Blob armazena, a Tree irá armazenar o nome do arquivo.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/120fd01c-f1e4-434d-a35e-22cf759672cf/Untitled.png)
+
+Commit é o obejto que contém o sha1 da tree e do Blob, nome do autor, mensagem que de sentindo ao arquivo e a hora e dia de transmissão. Junta todos os outros objetos, 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ae84f20-7ca2-4ba7-bee0-4ab9fdc8c5c6/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1bd4e3ce-7938-48a1-aae2-323734871934/Untitled.png)
+
+Desta forma o Git é um sistema distríbuido seguro, pois qualquer alteração em seus objetos gerará um novo SHA o qual é rastreável.
+
+### Chaves SSH e Token
+
+É uma forma de estabelecer uma conecção segura e encriptada entre duas maquinas, configurando a maquina local como uma maquina confiável para o GitHub com duas chaves, sendo uma publica e uma privada. Esta chave SSH fica alocada no GitHub>clicar na foto do perfil do canto direito superior>Settings>SSH and GPG Keys.
+
+Para gerar a chave pelo Git Bash.
+
+Abrir Git Bash>digite: ssh-keygen -t ed25519 -c jennifer.jno@gmail.com>Enter>Enter>digitar uma senha>Enter>confirme a senha>Enter
+
+a chave a ser utilizada no GitHub tem que ser a publica.
+
+Localize a pasta e a chave, e coloque o conteúdo no GitHub
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8f235e75-df4b-4f1e-8b8f-79099e898a00/Untitled.png)
+
+No GitHUb após colocar a chave ssh clique em add SSH Key> Confirme sua senha do GitHub.
+
+No Git Bash >
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3793f0a0-fff7-43f7-ae8c-5ed924195846/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b91e9ffa-468b-4969-8773-cc2104c13254/Untitled.png)
+
+## Primeiros comandos com Git
+
+Iniciar o Git -git init
+
+Iniciar o versionamento -git add
+
+Criar um commit - git commit
+
+mkdir + nome da pasta - cria a pasta
+
+cd + nome da pasta - entra dentro da pasta
+
+Crtl + L - limpa a tela do Git Bash
+
+ls -a - mostra as pastas ocultas
+
+cd(espaço).. - para voltar uma pasta
+
+git config —global [user.email](http://user.email) “jennifer.jno@gmail.com” - para deixar registrado qual o e-mail do autor
+
+git config —global [user.name](http://user.name) Je-Nogueira - para dar nome ao autor
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b814f989-d1fc-4866-ad83-2e50ce795494/Untitled.png)
+
+O arquivo Markdown (.md) é uma forma mais humanizada de escrever o arquivo HTML, não sendo necessário o conhecimento sobre html.
+
+criar um arquivo [strogonoff.md](http://strogonoff.md) dentro da pasta receitas - abrir em Typora - utilizar markdown para escrever - **negrito** _italico_ / (espaço)-(espaço) - cria um marcador de lista.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce1b769c-7234-4bf9-b63e-7ba542a48b72/Untitled.png)
+
+## Ciclo de vida dos arquivos no Git
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b2267cd-0665-47bf-8c7e-989f527cbff8/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff41dc21-8786-4194-bf4f-b7c8ebe1d828/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/004612c0-be08-406d-9eb8-c53ba2b312d3/Untitled.png)
+
+Ao dar o comando GIT INIT - cria-se uma pasta .git um repositório.
+
+Untracked - o git ainda não tem ciência deste arquivo
+
+Tracked - o git tem ciência destes arquivos
+
+Unmodified - o arquivo não foi modificado
+
+Modified - o arquivo foi modificado
+
+Staged - o arquivo esta a espera de um commit
+
+Verifique o estatus do arquivo com o comando -git status.
+
+mover arquivo - mv (nome do arquivo) ./nome do novo repositório
+
+-git add * - pega todos os arquivos que foram modificados dentro da pasta que vc esta e manda para o staged
+
+-git add . ?
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/54d91992-cb46-4171-b4d7-4c9cf3e0c888/Untitled.png)
+
+## Introdução ao GitHub
+
+### Trabalhando com o GitHub
+
+[https://github.com/](https://github.com/)
+
+Clique em > Sign Up (para fazer o cadastro - preencha preferencialmente com os dados já utilizados no Git - para verificar qual o dados foram inseridos no git de o comando - git config —list) 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/352ffe8c-5815-49c4-9fa6-c52a4884ab98/Untitled.png)
+
+Caso algum dado esteja errado, escreva o comando -git config —global —unset user.email
+
+-git config —global —unset user.name
+
+desta forma, será deletada as informações que estavam cadastradas no git, para fazer um novo commit será necessário fazer o cadastro de nome e e-mail novamente.
+
+-git config —global [user.email](http://user.email) “jennifer.jno@gmail.com”
+
+-git config —global [user.name](http://user.name) “Je-Nogueira”
+
+Para enviar um repositório para um servidor remoto, escreva o comando:
+
+git remote add origin [https://](https://endereço)link disponibilizado pelo GitHub (desta forma a palavra origin que é utilizada por convenção virá o apelido do link digitado
+
+-git remote -v - lista as listas de repositórios remotos que tem cadastrado
+
+## Resolvendo conflitos
+
+Normalmente os conflitos vão acontecer quando duas ou mais pessoas estão trabalhando no mesmo código - primeiro elas fazem a copia ou clone do repositório no git, cada uma faz a alteração na mesma linha, uma envia e a outra ainda continua mexendo no código, quando esta terminar e tentar enviar, o git irá reportar um erro, deixando claro que aquela versão não é a ultima, então vc deverá pegar a ultima versão e realizar as alterações novamente e ai sim enviar (push) pro git.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9ab58deb-978b-4396-b15c-323ec13938c6/Untitled.png)
+
+-git pull origin master (main)
